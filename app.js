@@ -60,11 +60,18 @@ c) correct answer (I would use a number for this)
 
     let questions = [q1, q2, q3];
 
-    let n = Math.floor(Math.random() * questions.length);
-    questions[n].displayQuestion();
+    function nextQuestion() {
+        let n = Math.floor(Math.random() * questions.length);
+        questions[n].displayQuestion();
 
-    let answer = parseInt(prompt('Please select the correct answer.'));
-    questions[n].checkAnswer(answer);
+        let answer = prompt('Please select the correct answer.');
+        
+        if (answer !== 'exit') {
+            questions[n].checkAnswer(parseInt(answer));
+            nextQuestion();
+        }
+    }
+    nextQuestion();
     
 })();
 
