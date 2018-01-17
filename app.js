@@ -74,8 +74,8 @@ c) correct answer (I would use a number for this)
                             ['Yes', 'No'],
                             0);
 
-    let q2 = new Question(`What is the name of this course's teacher?`,
-                            ['John', 'Micheal', 'Jonas'],
+    let q2 = new Question(`Is JavaScript a server-side or client-side language or both?`,
+                            ['Yes', 'No', 'Both'],
                             2);
 
     let q3 = new Question(`What does best describe coding?`,
